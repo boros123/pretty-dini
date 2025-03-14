@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /* Menghilangkan scroll horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    /* Agar teks tetap di tengah */
+}
+
+.greetings {
+    font-size: 4rem;
+    font-weight: 900;
+    white-space: nowrap;
+    /* Hindari teks melar */
+    max-width: 100%;
+    /* Agar tetap responsif */
+}
+
+.greetings>span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+
+    10%,
+    90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.greetings>span:nth-child(1) {
+    /* H */
+    animation-delay: 0s;
+}
+
+.greetings>span:nth-child(2) {
+    /* A */
+    animation-delay: 0.2s;
+}
+
+.greetings>span:nth-child(3) {
+    /* I */
+    animation-delay: 0.4s;
+}
+
+.greetings>span:nth-child(4) {
+    /* (spasi) */
+    animation-delay: 0.6s;
+}
+
+.greetings>span:nth-child(5) {
+    /* D */
+    animation-delay: 0.8s;
+}
+
+.greetings>span:nth-child(6) {
+    /* I */
+    animation-delay: 1s;
+}
+
+.greetings>span:nth-child(7) {
+    /* N */
+    animation-delay: 1.2s;
+    /* Muncul terakhir */
+}
+
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+    /* Pastikan terlihat di background hitam */
+    max-width: 100%;
+    /* Supaya responsif */
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Tambahkan responsif untuk tampilan HP */
+@media (max-width: 768px) {
+    .greetings {
+        font-size: 3rem;
+        /* Kurangi ukuran teks agar pas */
+    }
+
+    .description {
+        font-size: 1.2rem;
+        
+    }
+
+    .button button {
+        padding: 8px 16px;
+        /* Sesuaikan ukuran tombol */
+    }
+}
